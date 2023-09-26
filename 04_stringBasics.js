@@ -1,4 +1,4 @@
-var strName="Vishal";
+var strName="Hello";
 console.log(typeof("strName"));
 
 var greet ="Good morning";
@@ -31,3 +31,33 @@ console.log(" length before trim : " ,lengthBTrim);
 var result=StringTrim.trim();
 
 console.log(" length After trim : " ,result.length);
+
+console.log("================ search method==================");
+var result=greet.search("ood");
+console.log(result);
+
+console.log("================ slice method==================");
+var result=greet.slice(6);
+console.log(result);
+var result=greet.slice(6,10);
+console.log(result);
+
+console.log("================ split method==================");
+var result=greet.split(" ");
+console.log(result);
+//to count total no. of words
+var str="I am UI developer";
+var words=str.split(" ");
+console.log(words);  
+console.log("Total words are : ",words.length);
+console.log(`Total words are : ${words.length}`);
+console.log(typeof words);
+ 
+// String Template
+console.log(`I am "UI" developer `);
+
+var num1=10;
+var num2 =20;
+var result =num1+num2;
+console.log("addition of ", num1, " and ",num2 , "is : ", result);
+console.log(`addition of ${num1} and ${num2} is ${result}`);
