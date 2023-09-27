@@ -13,9 +13,73 @@ function stringHandsOn()
    var sliceAfterTrim =result.slice(22);
    var subStringAfterTrim = result.substring(22);
    console.log(`8. (slice) is -"${sliceAfterTrim}" and substring is "${subStringAfterTrim}"`);
-
    console.log(`9. Whether string ends with "up"? - ${result.endsWith("up")}`);
-   console.log(`10. Whether string starts with "Hey"? - ${result.startsWith("Hey")}`)
+   console.log(`10. Whether string starts with "Hey"? - ${result.startsWith("Hey")}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 stringHandsOn()
