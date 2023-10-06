@@ -59,7 +59,6 @@ const arrayNumbers = [ 20, 31, 40, 25, 23, 11, 29, 9, 60, 2, 11 ];
             console.log(element);  
         }       
     }
-    
      console.log(`Is number 115 available in arrayNumbers  ${arrayNumbers.includes(115)}`);
      console.log(`Is number 23 available in arrayNumbers  ${arrayNumbers.includes(23)}`);
 
