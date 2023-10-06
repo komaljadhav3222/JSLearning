@@ -25,8 +25,8 @@ arrayOfNum.pop();
 console.log(arrayOfNum);
 
 console.log(`====== Adding element in first position  =========`);
-arrayNumbers.unshift(99);
-console.log(arrayNumbers);
+arrayOfNum.unshift(99);
+console.log(arrayOfNum);
 
 let arrayN = [22, 11, 44, 55, 77, 33];
 console.log(`====== Removing element in first position =========`);
@@ -67,12 +67,83 @@ for (let index = arrayNum.length-1; index >=0; index--) {
     console.log(element);
 }
 
-let arrayNums = [22, 11, 44, 55, 77, 33];
+let numbersArray = [22, 11, 44, 55, 77, 33];
 console.log(`====== Adding element in last=========`);
-arrayNums.push(88);
-console.log(arrayNums);
+numbersArray.push(88);
+console.log(numbersArray);
 
 let arrayNumbers = [22, 11, 44, 55, 77, 33];
 console.log(`====== Removing element in last=========`);
 arrayNumbers.pop();
 console.log(arrayNumbers);
+
+// console.log(`Insert element at the index 3 and at the time of insertion don't replace elements `);
+// console.log(`Before insertion array is${arrayNumbers}`);
+// arrayNumbers.splice(3,0,100,200,300);//0 for do not replace element
+// console.log(`After insertion array is${arrayNumbers}`);
+
+// arrayNumbers.splice(3,2,700);
+// console.log(`After insertion array is${arrayNumbers}`);
+
+console.log(`====== splice() to insert element =========`);
+var arrayNumber = [22, 11, 44, 55, 77, 33];
+// Insert element 99 at index 2 ==> [22, 11, 99, 44, 55, 77, 33]
+arrayNumber.splice(2,0,99);
+console.log(arrayNumber);
+
+console.log(`Insert elements 100, 200, 400 at index 3 and at the time of insertion don't replace any elements`);
+var arrayNumber = [22, 11, 44, 55, 77, 33];
+// Insert elements 100, 200, 400 at index 3 ==> [22, 11, 44, 100,200,400,55, 77, 33];
+arrayNumber.splice(3, 0, 100, 200, 400);
+console.log(arrayNumber);
+
+console.log(`Insert an element 500 at index 2 by replacing an element `);
+var arrayNumber = [22, 11, 44, 55, 77, 33];
+// [22, 11, 500, 55, 77, 33];
+arrayNumber.splice(2, 1, 500);
+console.log(arrayNumber);
+
+console.log(`Insert an element 700 at index 3 by replacing 2 elements`);
+var arrayNumber = [22, 11, 44, 55, 77, 33];
+// [22, 11, 44, 700, 33]
+arrayNumber.splice(3, 2, 700)
+console.log(arrayNumber);
+
+console.log(`for in loop`);
+for (const key in arrayNumber) {
+    const element=arrayNumber[key];
+   // console.log(key,element);
+    console.log(`Index : ${key} , Element :${element}`);
+}
+
+console.log(`========= Traversing an array using while loop ==============`);
+var arrayNumber = [22, 11, 44, 55, 77, 33];
+var index=0;
+while (index<arrayNumber.length) {
+    console.log(arrayNumber[index]);
+    index++;
+}
+console.log(`========= Traversing an array using while loop ==============`);
+var arrayNumber=[22,11,44,55,77,33];
+
+  var index=0;
+do {
+    console.log(arrayNumber[index]);
+    index++;
+} while (index<arrayNumber.length);
+
+// MERN Developer - M: Mongo db, E: Express JS, R: Rect, N: NodeJS
+// MEAN Developer - M: Mongo db, E: Express JS, A: Rect, N: NodeJS
+var arrayNumber = [22, 11, 44, 55, 77, 33];
+console.log(`for of loop`);
+for (const element of arrayNumber) {
+    console.log(element);
+}
+console.log(`join method`);
+const joinedElement = arrayNumber.join(",");
+console.log(joinedElement);
+
+console.log(`Resizing an array`);
+var arrayNumber = [22, 11, 44, 55, 77, 33];// [22, 11, 44]
+arrayNumber.length = 3;
+console.log(arrayNumber);
