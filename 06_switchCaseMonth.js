@@ -50,7 +50,7 @@ switch (month) {
         break;
 
     default:
-        console.log("Give value from 1 to 12 ");
+        console.log(`Give value from 1 to 12 : Given value is ${month}`);
         break;
 }
 }
