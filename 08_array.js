@@ -147,3 +147,8 @@ console.log(`Resizing an array`);
 var arrayNumber = [22, 11, 44, 55, 77, 33];// [22, 11, 44]
 arrayNumber.length = 3;
 console.log(arrayNumber);
+
+const valueArray = ['name', 'age', 'isMarried', 'city'];
+let index=valueArray.indexOf("isMarried");
+valueArray.splice(index,1,"Graduation");
+console.log(valueArray);
