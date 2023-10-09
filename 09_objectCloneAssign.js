@@ -32,8 +32,8 @@ const rateOfInterest= {
 // Log all the properties that ‘sbiDetails’ got after merging with meaning message
 console.log(`Merge the bankSbi, bankLocation and rateOfInterest objects into new object namely → sbiDetails`);
 const sbiDetails=Object.assign(bankSbi,bankLocation,rateOfInterest);
-console.log(`Merged Object :- ${sbiDetails}`);
-
+console.log(sbiDetails);
+console.table(sbiDetails);
 // 6. Traverse this merged object - step 5 using for in loop and log details properly
 for (const key in sbiDetails) {
     console.log(`${key} :- ${sbiDetails[key]}`);
