@@ -60,3 +60,5 @@ traverseObject(coepCollege);
 traverseObject(patilCollege);
 traverseObject(bharatiCollege);
 traverseObject(symbiosisCollege);
+
+console.log(coepCollege instanceof College);
