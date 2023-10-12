@@ -14,7 +14,9 @@ console.log(new Date("Oct 28 , 2023 09:24:00 "));
 console.log(new Date("28 Oct 2023"));
 console.log(new Date("28/10/2023"));//invalid 
 console.log(new Date("28-10-2023"));//invalid
-
+//Write a JavaScript program to get the current date.
+const date1 =new Date();
+console.log(`Current date is - ${date1.toDateString()}`);
 const square10 = Math.pow(10,2);
 console.log(square10);
 
