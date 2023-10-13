@@ -13,10 +13,13 @@ const employee_info =`{
 }`
 const employeeInfoObject = JSON.parse(employee_info);
 console.log(typeof employeeInfoObject, employeeInfoObject);
+console.log("=================== Role DEV======================");
+
 console.log(employeeInfoObject.role[0]);
+console.log("=================== employee Last Name======================");
 let employeeName = employeeInfoObject.name.split(" ");
 console.log(employeeName[1]);
 let employeeJoinDate=employeeInfoObject.doj;
-console.log(typeof employeeJoinDate);
 let employeeJoinYear = employeeJoinDate.split("-");
+console.log("=================== employee Join year======================");
 console.log(employeeJoinYear[2]);
