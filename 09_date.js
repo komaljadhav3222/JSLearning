@@ -9,7 +9,7 @@ console.log(date.getDay());
 console.log(date.getHours());
 console.log(date.getMinutes());
 console.log(date.getMilliseconds());
-
+console.log(date.getFullYear());
 console.log(new Date("Oct 28 , 2023 09:24:00 "));
 console.log(new Date("28 Oct 2023"));
 console.log(new Date("28/10/2023"));//invalid 
