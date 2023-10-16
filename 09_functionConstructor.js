@@ -12,7 +12,7 @@ const sbiBank=new Bank('SBI','Pune',124563);
 const axisBank=new Bank('AXIS','Mumbai',127896);
 //console.log(axisBank.bankName,axisBank.location,axisBank.pin);
 
-const hdfcBank=new Bank('HDFC','Banglore',112233);
+const hdfcBank=new Bank('HDFC','Bangalore',112233);
 //console.log(hdfcBank.bankName,hdfcBank.location,hdfcBank.pin);
  //prototype special object that is associated to every function and object by default (parent class from which sub classes inherit the properties) is also blueprint 
  //like class, in has common properties(eg. - length and push properties are defined in Array.prototype)

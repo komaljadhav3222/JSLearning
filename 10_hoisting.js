@@ -16,9 +16,9 @@ function add(){
     console.log(10+20);
 }
 
-//mult(); --> can not hoist function expression
-var mult=function(){
+//multiplication(); --> can not hoist function expression
+var multiplication=function(){
     const multiply=10*20;
     console.log(multiply);
 }
-mult();
+multiplication();
