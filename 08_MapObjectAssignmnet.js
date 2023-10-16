@@ -1,44 +1,31 @@
-class Bank{
-    bank_name  
-    location
-     account_no
-      ifsc
-       interest_rate
-       constructor(bank_name, location, account_no, ifsc, interest_rate){
-        this.bank_name=bank_name;
-        this.location=location;
-        this.account_no=account_no;
-        this.ifsc=ifsc;
-        this.interest_rate=interest_rate;
+class Bank {
+    constructor(bankName, location, accountNo, ifsc, interestRate) {
+        this.bankName = bankName;
+        this.location = location;
+        this.accountNo = accountNo;
+        this.ifsc = ifsc;
+        this.interestRate = interestRate;
     }
 }
 
-//Create objects - axis_bank, sbi_bank, icici_bank, kotak_bank, hdfc_bank, panjab_bank
-const axis_Bank=new Bank("AXIS","PUNE",452563985674,"axis456985",11);
-const hdfc_Bank=new Bank("HDFC","MUMBAI",857496865478,"hdfc456985",14);
-const kotak_Bank=new Bank("KOTAK","SATARA",963258741123,"kotak456985",11.5);
-const icici_Bank=new Bank("ICICI","SANGLI",123589647789,"icici456985",12);
-const sbi_Bank=new Bank("STATE BANK OF INDIA","SOLAPUR",456321789963,"sbi456985",13);
-const panjab_Bank=new Bank("PANJAB NATIONAL BANK","KOLHAPUR",221133556644,"pnb456985",13.5);
+// Create objects for different banks
+const axis_bank = new Bank("Axis Bank", "New York", "AXIS12345", "AXIS0001", 4.5);
+const sbi_bank = new Bank("SBI Bank", "London", "SBI67890", "SBI0002", 3.75);
+const icici_bank = new Bank("ICICI Bank", "San Francisco", "ICICI54321", "ICICI0003", 4.0);
+const kotak_bank = new Bank("Kotak Bank", "Los Angeles", "KOTAK78901", "KOTAK0004", 4.25);
+const hdfc_bank = new Bank("HDFC Bank", "Chicago", "HDFC23456", "HDFC0005", 3.9);
+const panjab_bank = new Bank("Panjab Bank", "Miami", "PANJAB34567", "PANJAB0006", 4.2);
 
-//Create a Map in such way that key should be accountNo and value is object that is created in step B.
-const mapOfBank =new Map();
-mapOfBank.set(axis_Bank.account_no,axis_Bank);
-mapOfBank.set(hdfc_Bank.account_no,hdfc_Bank);
-mapOfBank.set(kotak_Bank.account_no,kotak_Bank);
-mapOfBank.set(icici_Bank.account_no,icici_Bank);
-mapOfBank.set(sbi_Bank.account_no,sbi_Bank);
-mapOfBank.set(panjab_Bank.account_no,panjab_Bank);
+// Create a Map with accountNo as keys and bank objects as values
+const bankMap = new Map();
+bankMap.set(axis_bank.accountNo, axis_bank);
+bankMap.set(sbi_bank.accountNo, sbi_bank);
+bankMap.set(icici_bank.accountNo, icici_bank);
+bankMap.set(kotak_bank.accountNo, kotak_bank);
+bankMap.set(hdfc_bank.accountNo, hdfc_bank);
+bankMap.set(panjab_bank.accountNo, panjab_bank);
 
-//Traverse the map, Log bankName, accountNo and interestRate for each object
-// for (const bank of mapOfBank) {
-//   console.log(bank);
-//   console.log(bank.bank_name);
-// }
-
-for (const [accountNo, bank] of mapOfBank) {
-    console.log(`Bank Name: ${bank.bankName}`);
-    console.log(`Account Number: ${accountNo}`);
-    console.log(`Interest Rate: ${bank.interestRate}`);
-    console.log();
-}
+// Traverse the Map and log bankName, accountNo, and interestRate
+bankMap.forEach((bank, accountNo) => {
+    console.log(`Bank Name: ${bank.bankName}, Account No: ${accountNo}, Interest Rate: ${bank.interestRate}%`);
+});
