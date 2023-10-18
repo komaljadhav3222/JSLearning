@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web Session Storage</title>
+</head>
+<body>
+    <h2>Web Storage Demo</h2>
+    <h3>Session Storage</h3>  
+</body>
+<script>
+
+    console.log("Session Storage");
+    
+    window.sessionStorage.setItem("firstName", "Sachin");
+    
+    window.sessionStorage.setItem("lastName", "Tendulkar"); window.sessionStorage.setItem("country", "India");
+    
+    window.sessionStorage.setItem("runs", "35000");
+    
+    console.log(window.sessionStorage.length);
+    
+    console.log(window.sessionStorage.getItem("firstName")); console.log(window.sessionStorage.getItem("country"));
+    
+    console.log(window.sessionStorage.key("lastName"));
+    
+    window.sessionStorage.removeItem("runs");
+    
+    // window.sessionStorage.clear(); console.log("Session Storage");
+    
+    </script>
+</html>
