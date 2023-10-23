@@ -24,7 +24,7 @@ const arrayEmployees = [
   emp_viny,
   emp_mahi,
 ];
-console.log(`1. Find all the employees from ‘Wipro’ company`);
+console.log(`1. Find all the employees from ‘Wipro’ company using filter method`);
 const wiproEmployee = arrayEmployees.filter((employee) => {
   return employee.emp_company == "Wipro";
 });
@@ -33,6 +33,16 @@ const empName = wiproEmployee.map((currentValue, index) => {
 });
 console.log(empName);
 
+console.log(`-----------------Using Reduce method ----------------------------`);
+const wiproEmployees = arrayEmployees.reduce((result, employee) => {
+    if (employee.emp_company === 'Wipro') {
+      result.push(employee.emp_name);
+    }
+    return result;
+  }, []);
+  
+  console.log(wiproEmployees);
+  
 console.log(` 2. Find all the employees from ‘IT’ OR ‘HR’ dept`);
 const itOrHrEmployee = arrayEmployees.filter((employee) => {
   return employee.emp_dept == "IT" || employee.emp_dept == "HR";
@@ -41,7 +51,14 @@ const itOrHrEmpName = itOrHrEmployee.map((currentValue, index) => {
   return currentValue.emp_name;
 });
 console.log(`employees from ‘IT’ OR ‘HR’ dept ${itOrHrEmpName}`);
-
+console.log(`-----------------Using Reduce method ----------------------------`);
+const hrEmployee=arrayEmployees.reduce((result,employee)=>{
+if(employee.emp_dept=='HR'||employee.emp_company.emp_dept=='IT'){
+    result.push(employee.emp_name);
+}
+return result;
+},[])
+console.log(hrEmployee);
 console.log(` 3. Find all the employees whose emp id’s are greater than 50`);
 const empIdGreatFifty = arrayEmployees.filter((employee) => {
   return employee.emp_id > 50;
@@ -52,6 +69,14 @@ const empNameGreatFifty = empIdGreatFifty.map((currentValue, index) => {
 console.log(
   `employees whose emp id’s are greater than 50 ${empNameGreatFifty}`
 );
+console.log(`-----------------Using Reduce method ----------------------------`);
+const idOfEmp=arrayEmployees.reduce((result,emp)=>{
+if(emp.emp_id>50){
+result.push(emp.emp_name);
+}
+return result
+},[])
+console.log(idOfEmp);
 
 console.log(`========== 4. Find all the employees whose names start with letter ‘A’ or ‘V’ or ‘M’ [ Hint→ startsWith( “A”) || startsWith( “V”)
     startsWith( “M”) ] ==========`);
@@ -65,13 +90,16 @@ const employee = arrayEmployees.filter((employee) => {
 const EmployeeName = employee.map((currentValue, index) => {
   return currentValue.emp_name;
 });
-console.log(
-  ` employees whose names start with letter ‘A’ or ‘V’ or ‘M’  ${EmployeeName}`
-);
-
-console.log(
-  `5. Find the average salary of the employee for all the department`
-);
+console.log(  ` employees whose names start with letter ‘A’ or ‘V’ or ‘M’  ${EmployeeName}`);
+console.log(`-----------------Using Reduce method ----------------------------`);
+const empNameStartsWith=arrayEmployees.reduce((result,emp)=>{
+    if(emp.emp_name.startsWith('A')||emp.emp_name.startsWith('V')||emp.emp_name.startsWith('M')){
+        result.push(emp.emp_name)
+    }
+return result
+},[])
+console.log(empNameStartsWith);
+console.log(  `5. Find the average salary of the employee for all the department`);
 const employeeSalary = arrayEmployees.filter((employee) => {
   return employee.emp_salary;
 });
