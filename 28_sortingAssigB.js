@@ -39,6 +39,6 @@ return emp1.emp_salary>emp2.emp_salary?1:-1;
  });
  const desSalary=arraySalary.reverse();
  desSalary.forEach((employee)=>{
-    console.log(`Employee Name - ${employee.emp_name} , salary - ${employee.emp_salary},Company - ${employee.emp_company}`);
+    console.log(`Employee salary - ${employee.emp_salary} ,Name - ${employee.emp_name} , Company - ${employee.emp_company}`);
 });
 
