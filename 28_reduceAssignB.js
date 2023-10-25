@@ -100,16 +100,16 @@ return result
 },[])
 console.log(empNameStartsWith);
 console.log(  `5. Find the average salary of the employee for all the department`);
-const employeeSalary = arrayEmployees.filter((employee) => {
-  return employee.emp_salary;
-});
-const totalEmployeesalary = employeeSalary.map((currentValue, index) => {
-  return currentValue.emp_salary;
-});
-const TotalSalary = totalEmployeesalary.reduce((runningTotal, value) => {
-  return runningTotal + value;
-});
-console.log(TotalSalary / totalEmployeesalary.length);
+// const employeeSalary = arrayEmployees.filter((employee) => {
+//   return employee.emp_salary;
+// });
+// const totalEmployeesalary = employeeSalary.map((currentValue, index) => {
+//   return currentValue.emp_salary;
+// });
+const TotalSalary = arrayEmployees.reduce((runningTotal, value) => {
+  return runningTotal + value.emp_salary;
+},0);
+console.log(TotalSalary / arrayEmployees.length);
 
 console.log(`6. Find the average salary for ‘IT’ department [ Hint → Filter the ‘IT’ department employee using filter( ) which
             return new array with only ‘IT’ department employees and then use reduce( ) to get the average ]`);
