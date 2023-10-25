@@ -10,16 +10,12 @@ console.log(`After removing duplicates - ${array}`);
 let str = "How are you mate";
 console.log(`Given String is  ${str}`);
 str=str.split(" ");
-// console.log(typeof str,str);
+console.log(typeof str,str);
 let newString="";
-for (const iterator of str) {
-   // console.log(iterator);
-   for (const key in iterator) {
-      // console.log(key);
+for (const iterator of str) {   // console.log(iterator);
+   for (const key in iterator) {      // console.log(key);
       const char =iterator[key];
-      if(key==0 || key==iterator.length-1){
-         // console.log("iterator => ",iterator[key]);
-         
+      if(key==0 || key==iterator.length-1){         // console.log("iterator => ",iterator[key]);         
          newString=newString+char.toUpperCase();
       }
       else{
