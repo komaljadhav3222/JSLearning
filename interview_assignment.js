@@ -27,38 +27,26 @@ for (let i = 1; i <= 100; i++) {
 }
 console.log(`============== repeated char count in a string ====================`);
 //repeated char count in a string
-let str ="I am a";
-let string=str.split(" ");
-let count=0;
-let emptyCharCount=0;
-let newStrArray=[];
-    for (let index = 0; index < str.length; index++) {
-        const element = str.charAt(index).toUpperCase();
-        if (element==" ") {
-            emptyCharCount++;
-          console.log("empty character - ",emptyCharCount);
-        } else {
-            newStrArray.push(element); 
-        }
-    // console.log(`element - ${element} - count- ${count}`);
-    }
-    console.log(newStrArray);
-    var newString="";
-   for (const key in newStrArray) {
-    const element = newStrArray[key];
-   
-    if (newString.includes(element)) {
-       // newString=newString+element;
-        count++;
-    } else {
-        newString=newString+element;
-        count=1;
-    }
-    console.log(`element - ${element} - count- ${count}`);
-    
-   }
-    
-   
-    
 
+function countRepeating(str) {
+	  	// creating a new map
+  	let map = new Map();
+  	for (let i = 0; i < str.length; i++) {
+		map.set(str[i], 0);
+	}
+
+	// iterate on the whole string and update the count of each character
+	for (let i = 0; i < str.length; i++) {
+		let curr_count = map.get(str[i]);
+		map.set(str[i], curr_count + 1);
+  	}
+
+  	// printing the count of each character
+  	for (let [key, value] of map) {
+		console.log(`${key} occurs ${value} times.`);
+  	}
+}
+
+let given_string = "I am a good programmer";
+countRepeating(given_string);
 
